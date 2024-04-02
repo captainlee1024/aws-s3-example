@@ -64,3 +64,12 @@ LocalStack部署在远程服务器
 socat TCP-LISTEN:8090,fork TCP:127.0.0.1:4566
 ```
 其S3客户端问该主机的ip:8090，然后socat转发到本地的127.0.0.1:4566，这样就能供其他机器的S3客户端访问该主机上Docker容器内的localstack服务了。
+
+
+## Running S3 Getting Start
+
+如果你的localstack部署在本地，并且使用默认端口，那么启动后可以直接运行S3-Getting-Start测试
+```shell
+cd examples
+cargo run --bin s3_getting_started
+```
